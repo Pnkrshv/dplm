@@ -1,0 +1,28 @@
+@import url(../index.css);
+
+.create__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: calc(var(--index) * 1);
+}
+
+.submit__btn{
+    margin-top: calc(var(--index) * 1);
+    & button{
+        padding:calc(var(--index) * .3) calc(var(--index) * 3);
+        font-size: calc(var(--index) * .6);
+        font-family: main;
+        color: var(--midnight);
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        background-color: var(--mute);
+        transition: .3s;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        &:hover{
+            background-color: var(--smoke);
+        }
+    }
+} 

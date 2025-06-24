@@ -1,0 +1,115 @@
+@import url('../index.css');
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--index) * .8) calc(var(--index) * 2);
+    background-color: var(--dark);
+    user-select: none;
+    font-family: main;
+}
+ 
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: calc(var(--index) * 1);
+    list-style: none;
+    flex: 1;
+    color: var(--smoke);
+    white-space: nowrap;
+}
+
+.list__item a{
+    padding: calc(var(--index) * .5);
+    position: relative;
+    cursor: pointer;
+    font-size: calc(var(--index) * .75);
+    font-weight: 200;
+    transition: .3s;
+    text-decoration: none;
+    color: var(--smoke);
+
+    &.active{
+        color: var(--light);
+        &::after{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 5%;
+        background-color: var(--smoke);
+        bottom: 0;
+        right: 50%;
+        }
+        &::before{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 5%;
+        background-color: var(--smoke);
+        bottom: 0;
+        left: 50%;
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 5%;
+        background-color: var(--smoke);
+        bottom: 0;
+        right: 50%;
+        transition: .3s;
+    }
+
+    &:hover::after{
+        width: 50%;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 5%;
+        background-color: var(--smoke);
+        bottom: 0;
+        left: 50%;
+        transition: .3s;
+    }
+
+    &:hover::before{
+        width: 50%;
+    }
+
+    &:hover{
+        color: var(--light);
+    }
+}
+
+.nav__title{
+    font-size: calc(var(--index) * 1);
+    text-align: center;
+    cursor: default;
+    display: flex;
+    flex: 1;
+    font-weight: 550;
+    color: var(--light);
+}
+
+.nav__logo img{
+    width: calc(var(--index) * 3);
+    flex: 1;
+}
+
+@media (max-width: 750px) {
+    .nav{
+        flex-direction: column;
+    }
+
+    .nav__list{
+        flex-direction: column;
+    }
+}

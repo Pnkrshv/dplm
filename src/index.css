@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+:root{
+    --index: calc(1vh + 1vw);
+    --midnight: #1A2D42;
+    --dark: #2E4156;
+    --smoke: #AAB7B7;
+    --mute: #C0C8CA;
+    --light: #d4d8dd;
+}
+
+@font-face {
+    font-family: main;
+    src: url(assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
