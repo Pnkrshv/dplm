@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import Nav from './components/Nav'
 import CreateOpros from './components/CreateOpros'
@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="wrapper">
-      <BrowserRouter basename='/dplm' >
       <Router>
         <Nav />
         <Routes>
@@ -24,7 +23,6 @@ function App() {
           <Route path='/help' element={<Help />} />
         </Routes>
       </Router>
-      </BrowserRouter>
     </div>
   )
 }
