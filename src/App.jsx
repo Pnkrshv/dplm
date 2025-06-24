@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import { HashRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import Nav from './components/Nav'
 import CreateOpros from './components/CreateOpros'
