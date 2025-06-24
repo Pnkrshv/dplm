@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="wrapper">
       <Router>
+        <BrowserRouter basename="/dplm"></BrowserRouter>
         <Nav />
         <Routes>
           <Route path='/' element={<CreateOpros />} />
